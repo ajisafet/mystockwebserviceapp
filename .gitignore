@@ -1,0 +1,2 @@
+#ignore target folder; only src folder should be in git repo
+target/
