@@ -7,7 +7,7 @@ To run the web service application, I have created a docker repository at [temit
 
 Replace the following fields with an appropriate value:
 
-$DAYS - Is a place holder for reporting the last N days of the closing price for a stock, $STOCK. The default if it isn't set is 3.
+$DAYS - Is a place holder for reporting the last N days of the closing price for a stock, $STOCK. The default, if it isn't set, is 3.
 
 $STOCK - The 1 to 4 letter symbol for a company's stock (i.e. MSFT for Microsoft, AMZN for Amazon). The default is MSFT if environment variable isn't set.
 
