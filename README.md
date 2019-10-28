@@ -1,4 +1,4 @@
-# mystockwebserviceapp
+# My Stock Web Service App
 This is the source code of an application which is a web service that displays the closing stock prices from the [Alphavantage API](https://www.alphavantage.co/documentation/#dailyadj) for the stock of your choice for the last N days as specified by the user and calculates the average closing stock price over the desired period.
 
 To run the web service application, I have created a docker repository at [temitopeajisafe/mystockwebserviceapp](https://hub.docker.com/r/temitopeajisafe/mystockwebserviceapp). To pull the docker repository and run it, execute the command below: 
