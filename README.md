@@ -26,4 +26,4 @@ To run the web service with the default number of days (3) and stock symbol (MSF
 To interact with the web service, use a web browser or [curl](https://curl.haxx.se/download.html) to call the endpoint: 
 > http://localhost:$PORT/mystockwebservice/getclosingstockprice
 
-where $PORT is the port number set when starting the web server.
+where $PORT is the port number set when starting the web service.
