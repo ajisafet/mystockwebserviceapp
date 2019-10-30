@@ -28,6 +28,11 @@ spec:
               configMapKeyRef:
                 name: stockwebserviceapp-env
                 key: SYMBOL
+          - name: APIKEY
+            valueFrom:
+              secretKeyRef:
+                name: webservice-apikey
+                key: apikey
 ---
 apiVersion: v1
 kind: Service
@@ -56,6 +61,6 @@ metadata:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: APIKEY
+  name: webservice-apikey
 data:
   apikey: QzIyN1dEOVczTFVWS1ZWOQ==

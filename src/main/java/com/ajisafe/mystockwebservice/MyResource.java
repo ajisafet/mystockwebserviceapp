@@ -21,7 +21,7 @@ import com.google.gson.reflect.TypeToken;
  */
 @Path("getclosingstockprice")
 public class MyResource {
-	private static String webService = "https://www.alphavantage.co/query?apikey=C227WD9W3LUVKVV9&function=TIME_SERIES_DAILY_ADJUSTED";
+	private static String webService = "https://www.alphavantage.co/query?apikey=%s&function=TIME_SERIES_DAILY_ADJUSTED";
     /**
      * Method handling HTTP GET requests. The returned object will be sent
      * to the client as "text/plain" media type.
@@ -33,11 +33,12 @@ public class MyResource {
     public String getIt() {
     	String symbol = System.getenv("SYMBOL");
         String days = System.getenv("NDAYS");
+        String strWebServiceApiKey = System.getenv("APIKEY");
         Integer intDays = Integer.parseInt(days);
         Client client = ClientBuilder.newClient();
         
         // Contact AlphavantageData to pull stock price records
-        WebTarget target = client.target(webService + "&symbol="+symbol);
+        WebTarget target = client.target(String.format(webService, strWebServiceApiKey) + "&symbol="+symbol);
         String response = null;
         try {
         	response = target.request().get(String.class);
