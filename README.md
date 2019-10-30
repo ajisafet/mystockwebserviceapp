@@ -21,14 +21,20 @@ This will deploy the application to a locally running kubernetes cluster.
 3. Run the following command to see which port number is assigned to the Service object, mystockwebserviceapp-svc. The port number is set to 30001 in the YAML file, which can be changed if needed. Please note that the port number used by the application can be modified in the mystockwebserviceapp.yaml file
 
 > kubectl get service
+
+```
 NAME                       TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
 kubernetes                 ClusterIP   10.96.0.1      <none>        443/TCP          26h
 mystockwebserviceapp-svc   NodePort    10.96.192.58   <none>        8080:30001/TCP   48m
+```
 
 4. Call the end point http://localhost:$PORT/mystockwebservice/getclosingstockprice to interact with the web service.
 
 > curl http://localhost:30001/mystockwebservice/getclosingstockprice
+
+```
 MSFT data=[144.6223, 142.8300, 144.1900, 140.7300, 139.9400, 137.2400, 136.3700], average=140.84604
+```
 
 ### Docker
 
