@@ -9,6 +9,6 @@ ADD MyStockWebService-1.0-SNAPSHOT-jar-with-dependencies.jar /mystockwebservicea
 EXPOSE 8080
 
 ENV NDAYS 3
-ENV TICKER "MSFT"
+ENV SYMBOL "MSFT"
 
 CMD ["java", "-jar", "MyStockWebService-1.0-SNAPSHOT-jar-with-dependencies.jar"]

@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MyResourceTest {
 
@@ -43,8 +44,14 @@ public class MyResourceTest {
      */
     @Test
     public void testGetIt() {
-        String responseMsg = target.path("getclosingstockprice").request().get(String.class);
-    	
+        
+    	String responseMsg = null;
+        try{
+        	responseMsg = target.path("getclosingstockprice").request().get(String.class);
+        } catch (Exception e){
+        	System.out.print("Error: " + e.getMessage());
+        }
+
         assertNotEquals("Got it!", responseMsg);
     }
 }

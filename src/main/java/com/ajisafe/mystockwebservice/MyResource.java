@@ -31,13 +31,13 @@ public class MyResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getIt() {
-    	String ticker = System.getenv("TICKER");
+    	String symbol = System.getenv("SYMBOL");
         String days = System.getenv("NDAYS");
         Integer intDays = Integer.parseInt(days);
         Client client = ClientBuilder.newClient();
         
         // Contact AlphavantageData to pull stock price records
-        WebTarget target = client.target(webService + "&symbol="+ticker);
+        WebTarget target = client.target(webService + "&symbol="+symbol);
         String response = null;
         try {
         	response = target.request().get(String.class);
@@ -73,7 +73,7 @@ public class MyResource {
 		
 		alphavantageData = gson.fromJson(strBuilderResponse.toString(),AlphavantageData.class);
 
-		StringBuilder tickerData = new StringBuilder(ticker +" data=[");
+		StringBuilder tickerData = new StringBuilder(symbol +" data=[");
 		int counter = 0;
 		DayCloseStockPrice dayCloseStockPrice = null;
 		Map<String,DayCloseStockPrice> dayCloseStockPriceRecords = alphavantageData.getTimeSeriesDaily().get(0);
