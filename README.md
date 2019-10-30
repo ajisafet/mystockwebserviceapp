@@ -33,6 +33,12 @@ This will deploy the application to a locally running kubernetes cluster.
 
     MSFT data=[144.6223, 142.8300, 144.1900, 140.7300, 139.9400, 137.2400, 136.3700], average=140.84604
 
+5. To customise the stock (SYMBOL), number of days (NDAYS) and API key (APIKEY), change the ConfigMap and Secret resources in the mystockwebserviceapp.yaml YAML file.
+
+6. To stop the application, run the following command:
+
+> kubectl delete -f mystockwebserviceapp.yaml
+ 
 ### Docker
 
 To run the web service application, I have created a docker repository at [temitopeajisafe/mystockwebserviceapp](https://hub.docker.com/r/temitopeajisafe/mystockwebserviceapp). To pull the docker repository and run it, execute the command below: 
