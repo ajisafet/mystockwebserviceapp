@@ -7,7 +7,7 @@ The application can be run in a Docker container or a Kubernetes cluster. Before
 
 Please follow the instructions for your chosen mode of deployment.
 
-Kubernetes
+###Kubernetes
 
 To run the application, follow the listed instructions below.
 1. Clone the repository to your local machine.
@@ -30,7 +30,7 @@ mystockwebserviceapp-svc   NodePort    10.96.192.58   <none>        8080:30001/T
 > curl http://localhost:30001/mystockwebservice/getclosingstockprice
 MSFT data=[144.6223, 142.8300, 144.1900, 140.7300, 139.9400, 137.2400, 136.3700], average=140.84604
 
-Docker
+###Docker
 
 To run the web service application, I have created a docker repository at [temitopeajisafe/mystockwebserviceapp](https://hub.docker.com/r/temitopeajisafe/mystockwebserviceapp). To pull the docker repository and run it, execute the command below: 
 
