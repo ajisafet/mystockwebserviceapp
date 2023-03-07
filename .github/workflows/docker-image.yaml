@@ -19,7 +19,7 @@ jobs:
       uses: s4u/setup-maven-action@1.7.0
       with:
         java-version: 19
-        maven-version: 3.9.0
+        maven-version: 3.9.0 
 
     - name: Build Stock app jar file
       run: mvn package
