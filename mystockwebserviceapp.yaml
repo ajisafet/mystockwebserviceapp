@@ -5,7 +5,7 @@ metadata:
     app: mystockwebserviceapp-dep
   name: mystockwebserviceapp-dep
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: mystockwebserviceapp-dep
@@ -50,7 +50,7 @@ spec:
 ---
 apiVersion: v1
 data:
-  NDAYS: "7"
+  NDAYS: "10"
   SYMBOL: MSFT
 kind: ConfigMap
 metadata:
