@@ -1,10 +1,9 @@
-FROM adoptopenjdk:12-jre-hotspot
+FROM eclipse-temurin:latest
 
 RUN mkdir /mystockwebserviceapp
-RUN mkdir /app
 WORKDIR /mystockwebserviceapp
 
-ADD MyStockWebService-1.0-SNAPSHOT-jar-with-dependencies.jar /mystockwebserviceapp
+ADD ./target/MyStockWebService-1.0-SNAPSHOT-jar-with-dependencies.jar /mystockwebserviceapp
 
 EXPOSE 8080
 
